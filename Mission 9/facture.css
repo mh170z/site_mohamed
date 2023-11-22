@@ -1,0 +1,125 @@
+#myheader
+{
+  height: 150px;
+  background-color: white;
+  margin: 0;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#Gros_titre
+{
+  
+  float: right;
+  color: black;
+  font-weight: bold;
+  font-size: 32px;
+  margin-right: 25px;
+  margin-top: 25px;
+}
+
+#tableau_facture
+{
+  border: 1px solid black;
+  margin: 0;
+background-color: white;
+}
+
+.right_line
+{
+  border-right: 1px solid black;
+}
+.table_header
+{
+  color: white;
+  background-color: #3352cc;
+}
+
+.color1
+{
+  background-color: white;
+}
+
+.color2
+{
+  background-color: lightgrey;
+}
+
+
+.input_desc
+{
+  border: none;
+  width: 99%;
+}
+
+.input_qte
+{
+  border: none;
+  width: 95%;
+}
+.input_prx
+{
+  border: none;
+  width: 95%;
+}
+.input_tt
+{
+  border: none;
+  width: 95%;
+}
+
+
+.value_container
+{
+  text-align: center;
+  border: 1px solid black;
+  height: 20px;
+  width: 50px;
+  margin: 10px;
+  border-radius: 5px;
+
+}
+
+#div_value
+{
+  border-radius: 10px;
+  margin: 10px 75px;
+  background-color: white;
+  border: 1px solid white;
+  float: right;
+  text-align: right;
+}
+
+.small_container
+{
+  clear: both;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.btn
+{
+  
+  height: 50px;
+  width: 150px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 15px;
+  font-weight: bold;
+  color: black;
+  background-color:white;
+  transition: 0.9s ease-in-out;
+
+  float: left;
+}
+
+.btn:hover
+{
+  color: white;
+  background-color: black;
+  transform: scale(1.01);
+}
