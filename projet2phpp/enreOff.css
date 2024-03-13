@@ -1,0 +1,14 @@
+body { font-family: Arial, sans-serif; background-color: black; }
+ .container { max-width: 400px; margin: 50px auto;
+ padding: 20px; background-color: #fff; border-radius: 
+ 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+} .form-group { margin-bottom: 20px; } label
+ { display: block; font-weight: bold; margin-bottom: 5px; }
+  input[type="text"], input[type="email"], input[type="tel"], 
+  textarea, select { width: 100%; padding: 10px; border: 1px solid 
+    #ccc; border-radius: 5px; box-sizing: border-box; }
+input[type="file"] { margin-top: 5px; } 
+.btn { padding: 10px 20px; border: none; 
+    border-radius: 5px; cursor: pointer; } .btn-primary 
+{ background-color: lightgreen; color: #fff; }
+ .btn-danger { background-color:pink; color: #fff; }

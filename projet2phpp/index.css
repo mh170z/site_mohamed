@@ -1,0 +1,40 @@
+.style1 {
+    border: 1px solid black;
+    margin-left: 8px;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+div {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 500px;
+    height: 180px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px blueviolet;
+}
+.style2 {
+    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    margin-left: 8px;
+}
+.style {
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: 6px;
+    background-color: transparent;
+    width: 120px;
+    height: 30px;
+    margin-top:12px;
+}
+.style:hover {
+    background-color:blueviolet;
+    color: white;
+}
+a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: black;
+}
