@@ -1,0 +1,219 @@
+/* General Layout */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.table-manager {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Table Layout */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.data-table td {
+  padding: 12px;
+  border: 1px solid #e2e2e2;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.data-table td:first-child {
+  font-weight: bold;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button.update-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.prev-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+button.next-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.manage-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .table-manager {
+    padding: 15px;
+  }
+
+  .data-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+.titre {
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.titreModifie {
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/*.titreModifie:hover::after {*/
+.titreModifie::after {
+  /* permanent */
+  content: " (Modifications en cours) ";
+  color: red;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.table-title {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 2px;
+}
+
+.modifiable {
+  font-weight: bold;
+  /*text-decoration: underline; */
+}
+
+.modifiable::after {
+  /* permanent */
+  content: " *";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.primary-key::after {
+  /* permanent */
+  content: " ^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire::after {
+  /* permanent */
+  content: " !";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.modifiable.primary-key::after {
+  content: " *^"; /* Affiche les deux symboles */
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire.primary-key::after {
+  /* permanent */
+  content: " !^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire.primary-key.modifiable::after {
+  /* permanent */
+  content: " *!^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire.modifiable::after {
+  /* permanent */
+  content: " *!^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.note {
+  float: right;
+  font-size: 0.5em;
+  margin-top: -10px;
+}

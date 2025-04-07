@@ -1,0 +1,513 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f4f7fa;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 12px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: background 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+  background: rgb(236, 114, 0);
+}
+
+.menu-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.selected {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fc9004 !important;
+  font-weight: bold !important;
+}
+
+.selected:hover {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* Main Container */
+.main-container {
+  flex-grow: 1;
+  margin-left: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("activite.jpeg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Header (Login / Register) */
+.header {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgb(236, 114, 0);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+.header a:hover {
+  opacity: 0.8;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  background: white;
+  margin-top: 70px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-bottom;
+}
+
+.acceil {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .main-container {
+    margin-left: 200px;
+  }
+
+  .header {
+    top: 15px;
+    right: 15px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-container {
+    margin-left: 180px;
+  }
+
+  .content {
+    width: 90%;
+  }
+}
+
+.current {
+  display: block;
+}
+
+.not-current {
+  display: none;
+}
+
+/* manage tables */
+
+/* General Layout */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.table-manager {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Table Layout */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.data-table td {
+  padding: 12px;
+  border: 1px solid #e2e2e2;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.data-table td:first-child {
+  font-weight: bold;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: #fc9004;
+  color: white;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #e77f16; /* Changer légèrement la couleur de fond */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajouter une ombre portée */
+}
+
+button:disabled {
+  background-color: #f8c129;
+  cursor: not-allowed;
+  color: white;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.manage-buttons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.insert-buttons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .table-manager {
+    padding: 15px;
+  }
+
+  .data-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+.titre {
+  font-weight: bold;
+  color: #fc9004;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.titreModifie {
+  font-weight: bold;
+  color: #fc9004;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/*.titreModifie:hover::after {*/
+.titreModifie::after {
+  /* permanent */
+  content: " (Modifications en cours) ";
+  color: red;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.table-title {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 2px;
+}
+
+.modifiable {
+  font-weight: bold;
+  /*text-decoration: underline; */
+}
+
+.modifiable::after {
+  /* permanent */
+  content: " *";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.primary-key::after {
+  /* permanent */
+  content: " ^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire::after {
+  /* permanent */
+  content: " !";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.modifiable.primary-key::after {
+  content: " *^"; /* Affiche les deux symboles */
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire.primary-key::after {
+  /* permanent */
+  content: " !^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire.primary-key.modifiable::after {
+  /* permanent */
+  content: " *!^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.obligatoire.modifiable::after {
+  /* permanent */
+  content: " *!^";
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+.note {
+  float: right;
+  font-size: 0.5em;
+  margin-top: 10px;
+  color: black;
+}
+
+.acceuil {
+  color: #fc9004;
+}
+
+.error-message {
+  color: white !important;
+  background-color: #fc9004;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: hwb(34 0% 2% / 0.767);
+}
+
+.login-form label {
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.login-form input {
+  padding: 5px;
+}
+
+.login-form button {
+  background-color: #fc9004;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #fc9014;
+}
+
+.register {
+  background-color: #fc9004;
+}
+
+.user-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logout {
+  margin-left: auto;
+  text-decoration: none;
+  background-color: #fc9004;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.logout:hover {
+  background-color: #fc9004;
+}
+
+.username {
+  color: white;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.role {
+  font-size: 0.9em;
+  color: white !important;
+}
+
+.role.date {
+  font-size: 0.5em !important;
+  color: white !important;
+}
+
+#password-confirmation-popup {
+  position: fixed; /* Ensures it's positioned relative to the viewport */
+  top: 50%; /* Centers vertically */
+  left: 60%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Exact centering */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: none; /* Initially hidden */
+  z-index: 9999; /* Ensures the popup appears above other elements */
+  width: 320px; /* Set a width for the popup */
+  max-width: 90%; /* Max width of the popup */
+}
+
+#password-confirmation-popup .confirm-password-popup {
+  background: white;
+  color: #fc9004 !important;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lien {
+  font-size: 0.6em;
+  padding: 5px;
+  color: #af4c1db7 !important;
+}
